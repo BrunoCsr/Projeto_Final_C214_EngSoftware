@@ -12,6 +12,13 @@ class _GeneralGoalsPageState extends State<GeneralGoalsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton.small(
+        backgroundColor: myMainBlue,
+        child: Icon(
+          Icons.add,
+        ),
+        onPressed: () {},
+      ),
       appBar: AppBar(
         backgroundColor: myMainBlue,
         title: Text('Geral'),
