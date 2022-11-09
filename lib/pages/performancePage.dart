@@ -1,3 +1,4 @@
+import 'package:evryday_goals/models/GoalModel.dart';
 import 'package:flutter/material.dart';
 
 class PerformancePage extends StatefulWidget {
@@ -21,6 +22,9 @@ class _PerformancePageState extends State<PerformancePage> {
         height: double.infinity,
         width: double.infinity,
         color: myMainBlue,
+        child: Center(
+          child: GoalModel(),
+        ),
       ),
     );
     ;
