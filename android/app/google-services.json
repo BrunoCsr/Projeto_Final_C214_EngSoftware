@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "69127159231",
+    "project_id": "everyday-goals-app",
+    "storage_bucket": "everyday-goals-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69127159231:android:a9434c3c67887d8c26f50a",
+        "android_client_info": {
+          "package_name": "com.example.evryday_goals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69127159231-c126293g4f4p76k4h6qm1m9ajv70q8k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvnh13xoGB1ur_PRVoLGPhtKyF6_GNFc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69127159231-c126293g4f4p76k4h6qm1m9ajv70q8k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

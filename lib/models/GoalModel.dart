@@ -3,7 +3,20 @@
 import 'package:flutter/material.dart';
 
 class GoalModel extends StatefulWidget {
-  const GoalModel({super.key});
+  String title;
+  String description;
+  String pathToImage;
+  int urgency;
+  bool done;
+  final Color color;
+  GoalModel(
+      {super.key,
+      required this.color,
+      required this.title,
+      required this.description,
+      required this.pathToImage,
+      required this.urgency,
+      required this.done});
 
   @override
   State<GoalModel> createState() => _GoalModelState();
@@ -33,9 +46,14 @@ class _GoalModelState extends State<GoalModel> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Icon(Icons.check_circle),
+                    Icon(
+                        color: Colors.blue,
+                        widget.done
+                            ? Icons.check_circle
+                            : Icons.circle_outlined),
                     Icon(
                       Icons.circle_rounded,
+                      color: widget.color,
                     )
                   ],
                 )),
@@ -44,7 +62,10 @@ class _GoalModelState extends State<GoalModel> {
               width: 252,
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-                child: Text('Este é o título da nota'),
+                child: Text(
+                  widget.title,
+                  style: TextStyle(color: Colors.blue),
+                ),
               ),
             ),
           ],
