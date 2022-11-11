@@ -13,20 +13,24 @@ class _PerformancePageState extends State<PerformancePage> {
   Widget build(BuildContext context) {
     Color myMainBlue = const Color(0xff343a6b);
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: myMainBlue,
-        title: Text('Seu desempenho'),
-        centerTitle: true,
-      ),
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        color: myMainBlue,
-        child: Center(
-          child: GoalModel(),
+        appBar: AppBar(
+          backgroundColor: myMainBlue,
+          title: Text('Seu desempenho'),
+          centerTitle: true,
         ),
-      ),
-    );
+        body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            color: myMainBlue,
+            child: Center(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 350,
+                  width: 350,
+                ),
+              ),
+            )));
     ;
   }
 }
