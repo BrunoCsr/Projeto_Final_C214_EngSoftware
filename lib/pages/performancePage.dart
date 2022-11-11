@@ -1,4 +1,4 @@
-import 'package:evryday_goals/models/GoalModel.dart';
+import 'package:evryday_goals/models/goal_model.dart';
 import 'package:flutter/material.dart';
 
 class PerformancePage extends StatefulWidget {
@@ -27,7 +27,8 @@ class _PerformancePageState extends State<PerformancePage> {
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
                   height: 350,
-                  width: 350,
+                  width: 370,
+                  child: Image(image: AssetImage('lib/assets/myLogo.png')),
                 ),
               ),
             )));
