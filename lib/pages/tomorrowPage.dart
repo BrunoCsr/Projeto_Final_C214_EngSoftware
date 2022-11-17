@@ -15,20 +15,29 @@ class _TomorrowPageState extends State<TomorrowPage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton.small(
         backgroundColor: myMainBlue,
-        child: Icon(
+        child: const Icon(
           Icons.add,
         ),
         onPressed: () {},
       ),
       appBar: AppBar(
         backgroundColor: myMainBlue,
-        title: Text('Metas para amanhã'),
+        title: const Text('Metas para amanhã'),
         centerTitle: true,
       ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
         color: myMainBlue,
+        child: Stack(children: const [
+          Center(
+            child: SizedBox(
+              height: 300,
+              width: 350,
+              child: Image(image: AssetImage('lib/assets/MyLogoDog.png')),
+            ),
+          ),
+        ]),
       ),
     );
     ;

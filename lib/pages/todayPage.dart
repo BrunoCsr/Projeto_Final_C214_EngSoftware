@@ -117,7 +117,7 @@ class _TodayPageState extends State<TodayPage> {
                                   ],
                                 ),
                               )),
-                          Container(
+                          SizedBox(
                             height: 75,
                             width: MediaQuery.of(context).size.width,
                             child: Row(
@@ -187,13 +187,13 @@ class _TodayPageState extends State<TodayPage> {
           child: Stack(
             children: [
               Center(
-                child: Container(
+                child: SizedBox(
                   height: 300,
                   width: 350,
                   child: Image(image: AssetImage('lib/assets/MyLogoDog.png')),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: double.infinity,
                 width: double.infinity,
                 child: ListView(
