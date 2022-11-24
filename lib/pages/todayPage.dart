@@ -197,50 +197,7 @@ class _TodayPageState extends State<TodayPage> {
                 height: double.infinity,
                 width: double.infinity,
                 child: ListView(
-                  children: [
-                    GoalModel(
-                        color: Colors.green,
-                        title: 'Fazer tarefa de Redes',
-                        description: 'description',
-                        pathToImage: 'pathToImage',
-                        urgency: 2,
-                        done: false),
-                    GoalModel(
-                        color: Colors.blue,
-                        title: 'Levar o coisa pra consertar',
-                        description: 'description',
-                        pathToImage: 'pathToImage',
-                        urgency: 2,
-                        done: false),
-                    GoalModel(
-                        color: Colors.green,
-                        title: 'Trocar resistência',
-                        description: 'description',
-                        pathToImage: 'pathToImage',
-                        urgency: 2,
-                        done: false),
-                    GoalModel(
-                        color: Colors.yellow,
-                        title: 'Jiu-Jitsu',
-                        description: 'description',
-                        pathToImage: 'pathToImage',
-                        urgency: 2,
-                        done: true),
-                    GoalModel(
-                        color: Colors.red,
-                        title: 'C214',
-                        description: 'description',
-                        pathToImage: 'pathToImage',
-                        urgency: 2,
-                        done: true),
-                    GoalModel(
-                        color: Colors.red,
-                        title: 'Projeto final',
-                        description: 'description',
-                        pathToImage: 'pathToImage',
-                        urgency: 2,
-                        done: true)
-                  ],
+                  children: [],
                 ),
               )
             ],

@@ -44,11 +44,11 @@ class _TomorrowPageState extends State<TomorrowPage> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                                 color: myMainBlue,
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                     topLeft: Radius.circular(15),
                                     topRight: Radius.circular(15))),
                             child: Padding(
-                              padding: EdgeInsets.only(left: 20, top: 35),
+                              padding: const EdgeInsets.only(left: 20, top: 35),
                               child: Text(
                                 'Adicione nova meta para amanhã',
                                 style: GoogleFonts.lato(
@@ -61,7 +61,7 @@ class _TomorrowPageState extends State<TomorrowPage> {
                               width: double.infinity,
                               color: Colors.blue,
                               child: Padding(
-                                padding: EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   children: [
                                     Container(
@@ -75,7 +75,7 @@ class _TomorrowPageState extends State<TomorrowPage> {
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
-                                        children: [
+                                        children: const [
                                           TextField(
                                             decoration: InputDecoration(
                                               border: OutlineInputBorder(
@@ -92,7 +92,7 @@ class _TomorrowPageState extends State<TomorrowPage> {
                                         ],
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 8,
                                     ),
                                     Container(
@@ -108,7 +108,7 @@ class _TomorrowPageState extends State<TomorrowPage> {
                                         child: Center(
                                           child: IconButton(
                                               onPressed: () {},
-                                              icon: Icon(Icons
+                                              icon: const Icon(Icons
                                                   .add_photo_alternate_rounded)),
                                         ))
                                   ],
