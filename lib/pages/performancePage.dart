@@ -1,4 +1,3 @@
-import 'package:evryday_goals/models/goal_model.dart';
 import 'package:flutter/material.dart';
 
 class PerformancePage extends StatefulWidget {
@@ -15,7 +14,7 @@ class _PerformancePageState extends State<PerformancePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: myMainBlue,
-          title: Text('Seu desempenho'),
+          title: const Text('Seu desempenho'),
           centerTitle: true,
         ),
         body: Container(
@@ -25,7 +24,7 @@ class _PerformancePageState extends State<PerformancePage> {
             child: Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                child: Container(
+                child: const SizedBox(
                   height: 350,
                   width: 370,
                   child: Image(image: AssetImage('lib/assets/myLogo.png')),

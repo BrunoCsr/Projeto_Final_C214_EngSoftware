@@ -1,4 +1,3 @@
-import 'package:evryday_goals/pages/tomorrowPage.dart';
 import 'package:flutter/material.dart';
 
 class ConfigsPage extends StatefulWidget {

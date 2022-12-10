@@ -1,5 +1,5 @@
-import 'package:evryday_goals/database/Interfaces/ActionsI.dart';
 import '../../models/Goal.dart';
+import '../Interfaces/ActionsI.dart';
 
 class TomorrowsGoals implements Actions {
   static List<Goal> l = [];

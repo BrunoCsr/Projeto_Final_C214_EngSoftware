@@ -1,7 +1,4 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
-import 'dart:developer';
-
 import 'package:evryday_goals/database/implementations/TodaysGoals.dart';
 import 'package:evryday_goals/models/Goal.dart';
 import 'package:evryday_goals/models/goal_model_two.dart';

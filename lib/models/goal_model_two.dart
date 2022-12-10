@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class GoalModelTwo extends StatefulWidget {
   String title;
   String description;
@@ -57,7 +56,7 @@ class _GoalModelTwoState extends State<GoalModelTwo> {
                               widget.done
                                   ? Icons.check_circle
                                   : Icons.circle_outlined),
-                          Icon(
+                          const Icon(
                             Icons.circle_rounded,
                           )
                         ],
