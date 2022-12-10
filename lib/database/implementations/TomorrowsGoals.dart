@@ -1,20 +1,16 @@
 import '../../models/Goal.dart';
-import '../Interfaces/ActionsI.dart';
 
-class TomorrowsGoals implements Actions {
+class TomorrowsGoals {
   static List<Goal> l = [];
 
-  @override
   static addToStatic(value) {
     l.add(value);
   }
 
-  @override
   static removeFromStatic(value) {
     l.remove(value);
   }
 
-  @override
   static locateStaticByTitle(String string) {
     for (var i = 0; i < l.length; i++) {
       if (l[i].title == string) {
@@ -23,7 +19,4 @@ class TomorrowsGoals implements Actions {
     }
     return -1;
   }
-
-  @override
-  void switchh(from, to) {}
 }
