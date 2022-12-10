@@ -8,7 +8,7 @@ class GoalModel extends StatefulWidget {
   String pathToImage;
   int urgency;
   bool done;
-  final Color color;
+  Color color;
   GoalModel(
       {super.key,
       required this.color,
