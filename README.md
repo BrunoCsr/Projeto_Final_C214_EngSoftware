@@ -19,11 +19,6 @@ flutter doctor
 e siga o passo-a-passo sobre as licensas Android.
 
 
-
-
-
-
-
 ## Uso
 
 Para utilizar a aplicação em dispositivos Android é necessário utilizar um emulador ou seu próprio smartphone. Para rodar na Web, será utilizado um navegador como o Chrome ou o Edge.
