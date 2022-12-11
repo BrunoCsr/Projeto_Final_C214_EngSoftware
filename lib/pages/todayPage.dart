@@ -1,8 +1,7 @@
 import 'package:evryday_goals/database/implementations/TodaysGoals.dart';
-import 'package:evryday_goals/models/Goal.dart';
 import 'package:evryday_goals/models/goal_model_two.dart';
+import 'package:evryday_goals/models/slide_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TodayPage extends StatefulWidget {
   const TodayPage({super.key});
@@ -28,20 +27,20 @@ class _TodayPageState extends State<TodayPage> {
         children: [
           FloatingActionButton.small(
               backgroundColor: myMainBlue,
-              child: Icon(Icons.remove),
+              child: const Icon(Icons.remove),
               onPressed: () {
                 showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: Text('Apague um meta pelo título'),
-                        content: Container(
+                        title: const Text('Apague um meta pelo título'),
+                        content: SizedBox(
                           height: 120,
                           width: 50,
                           child: Column(
                             children: [
                               TextField(
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: OutlineInputBorder(gapPadding: 10),
                                   labelText: 'Nome da meta a ser apagada:',
                                 ),
@@ -49,7 +48,7 @@ class _TodayPageState extends State<TodayPage> {
                                   meta = value;
                                 },
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               ElevatedButton(
@@ -65,7 +64,7 @@ class _TodayPageState extends State<TodayPage> {
                                       } catch (e) {}
                                     });
                                   },
-                                  child: Text('Deletar'))
+                                  child: const Text('Deletar'))
                             ],
                           ),
                         ),
@@ -74,15 +73,85 @@ class _TodayPageState extends State<TodayPage> {
               }),
           FloatingActionButton.small(
             backgroundColor: myMainBlue,
-            child: Icon(
+            child: const Icon(
               Icons.add,
             ),
             onPressed: () {
-              showModalBottomSheet(
-                  backgroundColor: Colors.black,
-                  isScrollControlled: true,
-                  context: context,
-                  builder: (context) => Padding(
+              setState(() {
+                showModalBottomSheet(
+                    backgroundColor: Colors.black,
+                    isScrollControlled: true,
+                    context: context,
+                    builder: (context) => SlideWidget(
+                          title: title,
+                          description: description,
+                          meta: meta,
+                          urgencia: urgencia,
+                          which: '1',
+                        ));
+              });
+            },
+          ),
+          const SizedBox(
+            width: 16,
+          )
+        ],
+      ),
+      appBar: AppBar(
+        backgroundColor: myMainBlue,
+        title: const Text('Metas de hoje'),
+        centerTitle: true,
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        color: myMainBlue,
+        child: Center(
+          child: Stack(
+            children: [
+              const Center(
+                child: SizedBox(
+                  height: 300,
+                  width: 350,
+                  child: Image(image: AssetImage('lib/assets/MyLogoDog.png')),
+                ),
+              ),
+              SizedBox(
+                  height: double.infinity,
+                  width: double.infinity,
+                  child: ListView.builder(
+                    itemCount: TodayGoals.l.length,
+                    itemBuilder: (context, i) {
+                      if (TodayGoals.l.isNotEmpty) {
+                        return GoalModelTwo(
+                            title: TodayGoals.l[i].title.toString(),
+                            description: TodayGoals.l[i].description.toString(),
+                            pathToImage: TodayGoals.l[i].pathToImage.toString(),
+                            urgency: TodayGoals.l[i].urgency.toString(),
+                            done: TodayGoals.l[i].done!);
+                      } else {
+                        return Center(
+                          child: Container(
+                            height: 50,
+                            width: 50,
+                            color: Colors.yellow,
+                          ),
+                        );
+                      }
+                    },
+                  ))
+            ],
+          ),
+        ),
+      ),
+    );
+    ;
+  }
+}
+
+
+
+/*Padding(
                       padding: EdgeInsets.only(
                           bottom: MediaQuery.of(context).viewInsets.bottom),
                       child: Container(
@@ -263,62 +332,4 @@ class _TodayPageState extends State<TodayPage> {
                                 ),
                               )
                             ],
-                          ))));
-            },
-          ),
-          SizedBox(
-            width: 16,
-          )
-        ],
-      ),
-      appBar: AppBar(
-        backgroundColor: myMainBlue,
-        title: Text('Metas de hoje'),
-        centerTitle: true,
-      ),
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        color: myMainBlue,
-        child: Center(
-          child: Stack(
-            children: [
-              Center(
-                child: SizedBox(
-                  height: 300,
-                  width: 350,
-                  child: Image(image: AssetImage('lib/assets/MyLogoDog.png')),
-                ),
-              ),
-              SizedBox(
-                  height: double.infinity,
-                  width: double.infinity,
-                  child: ListView.builder(
-                    itemCount: TodayGoals.l.length,
-                    itemBuilder: (context, i) {
-                      if (TodayGoals.l.isNotEmpty) {
-                        return GoalModelTwo(
-                            title: TodayGoals.l[i].title.toString(),
-                            description: TodayGoals.l[i].description.toString(),
-                            pathToImage: TodayGoals.l[i].pathToImage.toString(),
-                            urgency: TodayGoals.l[i].urgency.toString(),
-                            done: TodayGoals.l[i].done!);
-                      } else {
-                        return Center(
-                          child: Container(
-                            height: 50,
-                            width: 50,
-                            color: Colors.yellow,
-                          ),
-                        );
-                      }
-                    },
-                  ))
-            ],
-          ),
-        ),
-      ),
-    );
-    ;
-  }
-}
+                          )))*/
