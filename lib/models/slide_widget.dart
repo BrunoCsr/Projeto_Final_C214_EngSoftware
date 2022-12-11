@@ -52,11 +52,11 @@ class _SlideWidgetState extends State<SlideWidget> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: myMainBlue,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(15),
                           topRight: Radius.circular(15))),
                   child: Padding(
-                    padding: EdgeInsets.only(left: 20, top: 35),
+                    padding: const EdgeInsets.only(left: 20, top: 35),
                     child: Text(
                       'Adicione uma nova meta para hoje',
                       style:
@@ -69,7 +69,7 @@ class _SlideWidgetState extends State<SlideWidget> {
                     width: double.infinity,
                     color: Colors.blue,
                     child: Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       child: Row(
                         children: [
                           Container(
@@ -82,7 +82,7 @@ class _SlideWidgetState extends State<SlideWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 TextField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: OutlineInputBorder(gapPadding: 10),
                                     labelText: 'Título',
                                   ),
@@ -91,7 +91,7 @@ class _SlideWidgetState extends State<SlideWidget> {
                                   },
                                 ),
                                 TextField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: OutlineInputBorder(),
                                     labelText: 'Descrição',
                                   ),
@@ -99,7 +99,7 @@ class _SlideWidgetState extends State<SlideWidget> {
                                       widget.description = value,
                                 ),
                                 TextField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: OutlineInputBorder(),
                                     labelText: 'Urgência (1,2 ou 3)',
                                   ),
@@ -108,7 +108,7 @@ class _SlideWidgetState extends State<SlideWidget> {
                               ],
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 8,
                           ),
                           Container(
@@ -122,7 +122,7 @@ class _SlideWidgetState extends State<SlideWidget> {
                               child: Center(
                                 child: IconButton(
                                     onPressed: () {},
-                                    icon: Icon(
+                                    icon: const Icon(
                                         Icons.add_photo_alternate_rounded)),
                               ))
                         ],
