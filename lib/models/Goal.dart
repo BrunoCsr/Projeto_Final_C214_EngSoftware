@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import '../database/implementations/GeneralGoals.dart';
@@ -21,7 +23,7 @@ class Goal {
   );
 
   void changeDoneState() {
-    done != done;
+    done = !done!;
   }
 
   void defineGoalDestination(which, goal) {
@@ -34,15 +36,16 @@ class Goal {
     }
   }
 
-  void setColor() {
+  void setColor(urgency) {
+    log(urgency.toString());
     if (urgency == '1') {
-      color = Colors.blue;
+      this.color = Colors.blue;
     } else if (urgency == '2') {
-      color == Colors.yellow;
+      this.color == Colors.yellow;
     } else if (urgency == '3') {
-      color = Colors.red;
+      this.color = Colors.red;
     } else {
-      color = Colors.blue;
+      this.color = Colors.blue;
     }
   }
 }

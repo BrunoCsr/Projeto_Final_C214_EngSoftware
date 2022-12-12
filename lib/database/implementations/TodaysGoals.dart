@@ -19,4 +19,16 @@ class TodayGoals {
     }
     return -1;
   }
+
+  static int getStaticSize() {
+    return l.length;
+  }
+
+  static String getStaticFirstItemsTitle() {
+    return l[0].title.toString();
+  }
+
+  static removeLastFromStatic() {
+    l.removeLast();
+  }
 }

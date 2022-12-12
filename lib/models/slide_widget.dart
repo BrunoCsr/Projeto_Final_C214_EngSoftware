@@ -203,7 +203,6 @@ class _SlideWidgetState extends State<SlideWidget> {
                                   false,
                                 );
                                 GeneralGoals.addToStatic(goal);
-                                Navigator.pop(context);
                               },
                             )
                           ],
