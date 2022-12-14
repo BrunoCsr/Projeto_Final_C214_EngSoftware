@@ -1,3 +1,7 @@
+![CI Badge](https://github.com/BrunoCsr/Projeto_Final_C214_EngSoftware
+/actions/workflows/dart.yml/badge.svg)
+
+
 # Everyday Goals App
 
 Everyday Goals App é um aplicativo criado para auxiliar o usuário a gerir seu tempo a curto prazo, possibilitando a inserção de metas diárias, configuradas sempre um dia antes de serem realizadas. Assim, o usuário que possui dificuldades em se organizar passa a ter maior clareza acerca de seus afazeres ao longo do dia.
