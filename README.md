@@ -1,4 +1,4 @@
-![CI Badge](https://github.com/BrunoCsr/Projeto_Final_C214_EngSoftware/actions/workflows/dart.yml/badge.svg)
+![CI Badge](https://github.com/BrunoCsr/Projeto_Final_C214_EngSoftware/actions/workflows/CI.yml/badge.svg)
 
 # Everyday Goals App
 
